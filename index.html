@@ -4,9 +4,37 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>JS first task</title>
+    <title>JS task</title>
 </head>
 <body>
-    <script src="index.js"></script>
+    <script>
+        const data = [
+            {principal:2500,time:1.8}, 
+            {principal:1000,time:5}, 
+            {principal:3000,time:1}, 
+            {principal:2000,time:3}
+        ];
+        function interestCalculator(array){
+            let interestData = array;
+            for (let i = 0; i < interestData.length; i++){
+                if (interestData[i].principal >= 2500 && (interestData[i].time > 1 && interestData[i].time < 3)){ 
+                    interestData[i].rate = 3;
+                } else if(interestData[i].principal >=2500 && interestData[i].time >= 3){
+                    interestData[i].rate = 4;
+                } else if(interestData[i].principal < 2500 || interestData[i].time <= 1){
+                    interestData[i].rate = 2;
+                } else {
+                    interestData[i].rate = 1;
+                }
+                interestData[i].interest =
+                    (interestData[i].principal * 
+                        interestData[i].time *
+                        interestData[i].rate) / 100
+            }
+            console.log(interestData);
+            return interestData;
+        }  
+        interestCalculator(data);     
+    </script>
 </body>
 </html>
