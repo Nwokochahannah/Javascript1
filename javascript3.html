@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h1>JAVASCRIPT TASK 3</h1>
+    <script>
+        function divisibleNumbers(whole){
+    let yugioh = [];
+    for (int = 1; int <= whole; int++){
+        if (int % 2 === 0 && int % 3 === 0 && int % 5 === 0){
+            yugioh.push ("yu-gi-oh");
+        } else if (int % 2 === 0 && int % 3 === 0){
+            yugioh.push ("yu-gi");
+        } else if (int % 2 === 0 && int % 5 === 0){
+            yugioh.push ("yu-oh");
+        } else if (int % 3 === 0 && int % 5 === 0){
+            yugioh.push ("gi-oh");
+        } else if(int % 2 == 0){
+            yugioh.push ("yu");
+        } else if (int % 3 == 0){
+            yugioh.push ("gi");
+        }  else if (int % 5 == 0){
+            yugioh.push ("oh");
+        } else {
+            yugioh.push (int);
+        }
+    }
+    console.log(yugioh);
+    return yugioh;
+}
+divisibleNumbers(100);
+divisibleNumbers(30);
+
+    </script>
+</body>
+</html>
